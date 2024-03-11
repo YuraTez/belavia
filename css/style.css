@@ -309,6 +309,10 @@
   color: #274e96;
 }
 
+.rent-btn.hide{
+  display: none;
+}
+
 .form {
   display: flex;
   flex-direction: column;

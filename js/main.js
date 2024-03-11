@@ -11,7 +11,8 @@ arrSelect.forEach((el)=>{
 
 
 $(".rent-btn").on("click" , function (){
-    $(".car-list").slideToggle();
+    $(".car-list").slideDown();
+    $(".rent-btn").addClass("hide");
 })
 
 $( function() {
@@ -75,6 +76,7 @@ $(".rent-inner--offer").on("click" , function (event){
                 );
             },500)
             offerEl.classList.add("d-none");
+        $(".rent-btn").removeClass("hide");
 
     }else if(target.classList.contains("car-item__btn") && target.closest(".best-offer")){
         let el = $(target);
@@ -89,30 +91,6 @@ $(".rent-inner--offer").on("click" , function (event){
         },500)
     }
 })
-
-/*
-$(".car-item__btn").on("click", function (){
-    let offerEl = this.closest(".car-item").cloneNode(true);
-
-    let el = $(this);
-    let dest = el.attr('href');
-    if(dest !== undefined && dest !== '') {
-
-        bestOffer.innerHTML = ""
-        bestOffer.appendChild(offerEl);
-
-        $(".car-list").slideUp();
-        setTimeout(function (){
-            $('html').animate({
-                    scrollTop: $(dest).offset().top - 80
-                }, 500
-            );
-        },500)
-
-    }
-    return false;
-})
-*/
 
 
 
