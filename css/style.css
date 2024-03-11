@@ -950,6 +950,10 @@ input[type="radio"] {
     gap: 15px;
   }
 
+  .car-price span{
+    font-size: 13px;
+  }
+
   .best-offer__item .car-item__content {
     gap: 15px;
   }
