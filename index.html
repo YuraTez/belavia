@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>qwe</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="wrapper">
+        <div class="header-content">
+            <a href="#" class="header-logo">
+                <svg width="152" height="43" viewBox="0 0 152 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M120.7 6.10003C121.6 5.70003 122.7 6.20003 123 7.10003C123.4 8.00003 122.9 9.10003 122 9.40003C121.1 9.80003 120 9.30003 119.7 8.40003C119.4 7.50003 119.8 6.50003 120.7 6.10003Z" fill="#4B61C9"/>
+                    <path d="M122.701 15.4C122.701 15.5 122.801 15.5 122.901 15.4L123.101 14.5C123.101 14.4 123.201 14.4 123.201 14.5L123.801 15.3C123.801 15.4 123.901 15.3 124.001 15.2V14.2C124.001 14.2 124.001 14.1 124.101 14.1H124.201L124.901 14.8C125.001 14.9 125.101 14.8 125.001 14.7L124.901 13.7C124.901 13.6 125.001 13.6 125.001 13.6L125.801 14.1C125.901 14.1 125.901 14.1 125.901 14L125.601 12.9L123.201 10.2H123.101C123.001 10.3 122.801 10.4 122.701 10.4C122.501 10.5 122.401 10.5 122.201 10.5C122.201 10.5 122.101 10.5 122.101 10.6L122.301 14.2L122.701 15.4Z" fill="#4B61C9"/>
+                    <path d="M120 0.100024C120 2.44156e-05 119.9 2.44156e-05 119.8 0.100024L119.7 1.00002C119.7 1.10002 119.6 1.10002 119.6 1.00002L119 0.300024C119 0.200024 118.9 0.300024 118.9 0.400024V1.40002V1.50002H118.8L118 0.700024C117.9 0.600024 117.8 0.700024 117.9 0.800024L118 1.80002C118 1.90002 117.9 1.90002 117.9 1.90002L117 1.30002C116.9 1.30002 116.9 1.30002 116.9 1.40002L117.2 2.50002L119.6 5.20002H119.7C119.8 5.10002 120 5.00002 120.1 4.90002C120.3 4.80002 120.4 4.80002 120.6 4.80002C120.6 4.80002 120.7 4.80002 120.7 4.70002L120.5 1.10002L120 0.100024Z" fill="#4B61C9"/>
+                    <path d="M129.1 6.40005C129.2 6.40005 129.1 6.30005 129.1 6.20005L128.1 6.00005C128 6.00005 128 5.90005 128.1 5.90005L128.9 5.30005C129 5.20005 128.9 5.20005 128.9 5.20005H127.9C127.9 5.20005 127.8 5.20005 127.8 5.10005V5.00005L128.5 4.30005C128.6 4.20005 128.5 4.20005 128.4 4.20005L127.4 4.30005C127.3 4.30005 127.3 4.20005 127.3 4.20005L127.8 3.40005C127.8 3.30005 127.8 3.30005 127.7 3.30005L126.6 3.60005L124 6.10005V6.20005C124.1 6.30005 124.2 6.50005 124.3 6.60005C124.4 6.80005 124.4 6.90005 124.4 7.10005C124.4 7.10005 124.4 7.20005 124.5 7.20005L128.1 7.00005L129.1 6.40005Z" fill="#4B61C9"/>
+                    <path d="M113.7 9.10003C113.6 9.10003 113.6 9.20002 113.7 9.30002L114.6 9.50002C114.7 9.50002 114.7 9.60003 114.6 9.60003L113.8 10.2C113.7 10.2 113.8 10.3 113.9 10.3H114.9C114.9 10.3 115 10.3 115 10.4V10.5L114.3 11.2C114.2 11.3 114.3 11.3 114.4 11.3L115.4 11.2C115.5 11.2 115.5 11.3 115.5 11.3L115 12.1C115 12.2 115 12.2 115.1 12.2L116.2 11.9L118.9 9.50002V9.40002C118.8 9.30002 118.7 9.10002 118.6 9.00002C118.5 8.80002 118.5 8.70002 118.5 8.50002C118.5 8.50002 118.5 8.40002 118.4 8.40002L114.8 8.60003L113.7 9.10003Z" fill="#4B61C9"/>
+                    <path d="M127.8 12.2C127.9 12.2 127.9 12.1 127.9 12.1L127.4 11.3C127.4 11.2 127.4 11.2 127.5 11.2L128.4 11.3C128.5 11.3 128.5 11.2 128.5 11.2L127.8 10.5V10.4C127.8 10.4 127.8 10.3 127.9 10.3H128.9C129 10.3 129 10.2 128.9 10.2L128.1 9.60003C128 9.60003 128.1 9.50002 128.1 9.50002L129 9.30002C129.1 9.30002 129.1 9.20003 129 9.10003L128 8.60003L124.4 8.40002C124.4 8.40002 124.3 8.40002 124.3 8.50002C124.3 8.70002 124.2 8.80002 124.2 9.00002C124.1 9.20002 124 9.30002 123.9 9.40002V9.50002L126.6 11.9L127.8 12.2Z" fill="#4B61C9"/>
+                    <path d="M115.001 3.30005C114.901 3.30005 114.901 3.40005 114.901 3.40005L115.401 4.20005C115.401 4.30005 115.401 4.30005 115.301 4.30005L114.401 4.20005C114.301 4.20005 114.301 4.30005 114.301 4.30005L115.001 5.00005V5.10005C115.001 5.10005 115.001 5.20005 114.901 5.10005H113.901C113.801 5.10005 113.801 5.20005 113.901 5.30005L114.701 5.90005C114.801 5.90005 114.701 6.00005 114.701 6.00005L113.801 6.20005C113.701 6.20005 113.701 6.30005 113.801 6.40005L114.801 6.90005L118.401 7.10005C118.401 7.10005 118.501 7.10005 118.501 7.00005C118.501 6.80005 118.601 6.70005 118.601 6.50005C118.701 6.30005 118.801 6.20005 118.901 6.10005V6.00005L116.201 3.60005L115.001 3.30005Z" fill="#4B61C9"/>
+                    <path d="M125.9 1.40002C125.9 1.30002 125.8 1.30002 125.8 1.30002L125 1.80002C124.9 1.80002 124.9 1.80002 124.9 1.70002L125 0.800024C125 0.700024 124.9 0.700024 124.9 0.700024L124.2 1.40002H124.1C124.1 1.40002 124 1.40002 124.1 1.30002V0.300024C124.1 0.200024 124 0.200024 123.9 0.300024L123.3 1.10002C123.3 1.20002 123.2 1.10002 123.2 1.10002L123 0.100024C123 2.44156e-05 122.9 2.44156e-05 122.8 0.100024L122.3 1.10002L122 4.70002C122 4.70002 122 4.80002 122.1 4.80002C122.3 4.80002 122.4 4.90002 122.6 4.90002C122.8 5.00002 122.9 5.10002 123 5.20002H123.1L125.5 2.50002L125.9 1.40002Z" fill="#4B61C9"/>
+                    <path d="M116.9 14.1C116.9 14.2 117 14.2 117 14.2L117.8 13.7C117.9 13.7 117.9 13.7 117.9 13.8L117.8 14.7C117.8 14.8 117.9 14.8 117.9 14.8L118.6 14.1H118.7C118.7 14.1 118.8 14.1 118.8 14.2V15.2C118.8 15.3 118.9 15.3 119 15.2L119.6 14.4C119.6 14.3 119.7 14.4 119.8 14.4L120 15.4C120 15.5 120.1 15.5 120.2 15.4L120.7 14.4L120.9 10.8C120.9 10.8 120.9 10.7 120.8 10.7C120.6 10.7 120.5 10.6 120.3 10.6C120.1 10.5 120 10.4 119.9 10.3H119.8L117.4 13L116.9 14.1Z" fill="#4B61C9"/>
+                    <path d="M26.2004 34C26.2004 38.6 22.6004 42.1 15.4004 42.1H0.400391V11.3H14.6004C22.1004 11.3 24.6004 15.7 24.6004 19.4C24.6004 23.4 22.6004 25.3 20.3004 26.3C23.0004 27.2 26.2004 29.4 26.2004 34ZM3.90039 25.1H14.5004C17.8004 25.1 20.9004 23.5 20.9004 19.8C20.9004 17.2 19.2004 14.7 14.9004 14.7H3.90039V25.1ZM22.6004 33.7001C22.6004 30.8001 20.4004 28.2001 15.4004 28.2001H3.90039V38.8H15.7004C20.1004 38.8 22.6004 36.9001 22.6004 33.7001Z" fill="#4B61C9"/>
+                    <path d="M48.9008 35.4H52.8008C51.1008 39.6 47.6008 42.5 41.9008 42.5C34.6008 42.5 29.8008 37.2 29.8008 30.5C29.8008 23.9 34.3008 18.5 41.7008 18.5C49.1008 18.5 53.6008 23.8 53.6008 30.5V31.9H33.5008C34.0008 36 37.1008 39.3 42.0008 39.3C45.3008 39.3 47.6008 37.7 48.9008 35.4ZM33.5008 28.6H49.8008C49.1008 24.6 46.3008 21.6 41.7008 21.6C37.0008 21.6 34.2008 24.7 33.5008 28.6Z" fill="#4B61C9"/>
+                    <path d="M61.5004 9.60004H57.9004V42.1H61.5004V9.60004Z" fill="#4B61C9"/>
+                    <path d="M86.4002 22.6V18.8H90.0002V42H86.4002V38.3C84.6002 40.8 81.8002 42.4 77.8002 42.4C70.8002 42.4 66.2002 37.1 66.2002 30.4C66.2002 23.8 70.8002 18.4 77.8002 18.4C81.8002 18.5 84.6002 20.1 86.4002 22.6ZM86.6002 30.5C86.6002 25.7 83.6002 21.7 78.3002 21.7C73.0002 21.7 69.8002 25.7 69.8002 30.5C69.8002 35.3 73.0002 39.3 78.3002 39.3C83.6002 39.3 86.6002 35.3 86.6002 30.5Z" fill="#4B61C9"/>
+                    <path d="M116.301 18.9L106.901 42.1H102.701L93.3008 18.9H97.3008L104.801 38.4L112.301 18.9H116.301Z" fill="#4B61C9"/>
+                    <path d="M123.201 18.9H119.601V42.1H123.201V18.9Z" fill="#4B61C9"/>
+                    <path d="M148.1 22.6V18.8H151.7V42H148.1V38.3C146.3 40.8 143.5 42.4 139.5 42.4C132.5 42.4 127.9 37.1 127.9 30.4C127.9 23.8 132.5 18.4 139.5 18.4C143.5 18.5 146.3 20.1 148.1 22.6ZM148.3 30.5C148.3 25.7 145.3 21.7 140 21.7C134.7 21.7 131.5 25.7 131.5 30.5C131.5 35.3 134.7 39.3 140 39.3C145.3 39.3 148.3 35.3 148.3 30.5Z" fill="#4B61C9"/>
+                </svg>
+            </a>
+            <div class="header-lng">
+                <select name="lang" class="select-lang" id="lang">
+                    <option value="ru" id="ru">
+                        Русский
+                    </option>
+                    <option value="en" id="en">
+                        English
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="page">
+    <div class="wrapper">
+        <h2 class="h2">Заказ трансфера</h2>
+        <div class="rent-inner rent-inner--offer">
+            <div class="best-offer">
+                <div class="best-offer__item">
+                    <div class="car-item">
+                        <div class="car-item__content">
+                            <div class="car-item__img">
+                                <img src="img/car/car-1.png" alt="img">
+                            </div>
+                            <div class="car-item__description">
+                                <h3 class="car-item__description__title">
+                                    Эконом
+                                </h3>
+                                <div class="car-item__description__place">
+                                    До 3-х человек
+                                </div>
+                                <div class="car-item__description__text">
+                                    Skoda Rapid, Hyundai Accent или аналогичного класса
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item__order">
+                            <div class="car-price">
+                                75,00<span>BYN</span>
+                            </div>
+                            <a href="#rentForm" class="car-item__btn">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="car-list">
+                <div class="best-offer__item">
+                    <div class="car-item d-none">
+                        <div class="car-item__content">
+                            <div class="car-item__img">
+                                <img src="img/car/car-1.png" alt="img">
+                            </div>
+                            <div class="car-item__description">
+                                <h3 class="car-item__description__title">
+                                    Эконом
+                                </h3>
+                                <div class="car-item__description__place">
+                                    До 3-х человек
+                                </div>
+                                <div class="car-item__description__text">
+                                    Skoda Rapid, Hyundai Accent или аналогичного класса
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item__order">
+                            <div class="car-price">
+                                75,00<span>BYN</span>
+                            </div>
+                            <a href="#rentForm" class="car-item__btn">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="car-item__content">
+                        <div class="car-item__img">
+                            <img src="img/car/car-1.png" alt="img">
+                        </div>
+                        <div class="car-item__description">
+                            <h3 class="car-item__description__title">
+                                Комфорт
+                            </h3>
+                            <div class="car-item__description__place">
+                                До 3-х человек
+                            </div>
+                            <div class="car-item__description__text">
+                                Geely Emgrand или аналогичного класса
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item__order">
+                        <div class="car-price">
+                            85,00<span>BYN</span>
+                        </div>
+                        <a href="#rentForm" class="car-item__btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="car-item__content">
+                        <div class="car-item__img">
+                            <img src="img/car/car-2.png" alt="img">
+                        </div>
+                        <div class="car-item__description">
+                            <h3 class="car-item__description__title">
+                                Бизнес
+                            </h3>
+                            <div class="car-item__description__place">
+                                До 3-х человек
+                            </div>
+                            <div class="car-item__description__text">
+                                Toyota Camry, Skoda Superb или аналогичного класса
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item__order">
+                        <div class="car-price">
+                            120,00<span>BYN</span>
+                        </div>
+                        <a href="#rentForm" class="car-item__btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="car-item__content">
+                        <div class="car-item__img">
+                            <img src="img/car/car-3.png" alt="img">
+                        </div>
+                        <div class="car-item__description">
+                            <h3 class="car-item__description__title">
+                                Представительский
+                            </h3>
+                            <div class="car-item__description__place">
+                                До 3-х человек
+                            </div>
+                            <div class="car-item__description__text">
+                                Mercedes-Benz S Class W222 или аналогичного класса
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item__order">
+                        <div class="car-price">
+                            220,00<span>BYN</span>
+                        </div>
+                        <a href="#rentForm" class="car-item__btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="car-item__content">
+                        <div class="car-item__img">
+                            <img src="img/car/car-4.png" alt="img">
+                        </div>
+                        <div class="car-item__description">
+                            <h3 class="car-item__description__title">
+                                Микроавтобус
+                            </h3>
+                            <div class="car-item__description__place">
+                                до 8 пассажирских мест
+                            </div>
+                            <div class="car-item__description__text">
+                                Mercedes-Benz Vito,  Volkswagen Caravelle или аналогичного класса
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item__order">
+                        <div class="car-price">
+                            120,00<span>BYN</span>
+                        </div>
+                        <a href="#rentForm" class="car-item__btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="car-item__content">
+                        <div class="car-item__img">
+                            <img src="img/car/car-5.png" alt="img">
+                        </div>
+                        <div class="car-item__description">
+                            <h3 class="car-item__description__title">
+                                Микроавтобус
+                            </h3>
+                            <div class="car-item__description__place">
+                                до 21 пассажирских мест
+                            </div>
+                            <div class="car-item__description__text">
+                                Mercedes-Benz Sprinter, Volkswagen Crafter или аналогичного класса
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item__order">
+                        <div class="car-price">
+                            220,00<span>BYN</span>
+                        </div>
+                        <a href="#rentForm" class="car-item__btn">Заказать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rent-btn">
+                Показать все варианты
+                <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.22969 11.495C6.36286 11.4771 6.48636 11.4204 6.58308 11.3332L11.9159 6.55395C12.0506 6.44782 12.1324 6.29447 12.1421 6.13029C12.1518 5.96597 12.0885 5.80525 11.9671 5.68594C11.8458 5.56662 11.6771 5.49939 11.5009 5.49994C11.3246 5.5005 11.1565 5.56884 11.036 5.68899L6.14307 10.0764L1.25017 5.68899C1.12965 5.56884 0.961509 5.5005 0.785186 5.49994C0.609011 5.49939 0.440277 5.56662 0.31902 5.68594C0.197602 5.80526 0.134361 5.96597 0.144033 6.13029C0.153705 6.29448 0.235541 6.44783 0.370203 6.55395L5.70306 11.3332C5.84322 11.4589 6.03695 11.5185 6.22964 11.4949L6.22969 11.495Z" fill="#3D73D8"/>
+                </svg>
+            </div>
+        </div>
+        <form action="#" class="form" method="post" id="rentForm">
+            <div class="rent-inner">
+                <h3 class="form-title">Данные по трансферу</h3>
+                <div class="form-inner">
+                    <div class="row">
+                        <p class="row-text">Направление трансфера: <span class="mark">*</span></p>
+                    </div>
+                    <div class="form-group form-radio">
+                        <div class="form-group__radio">
+                            <input type="radio" name="airport" id="airport-1" checked>
+                            <label for="airport-1">Национальный аэропорт Минск-Минск</label>
+                        </div>
+                        <div class="form-group__radio">
+                            <input type="radio" name="airport" id="airport-2">
+                            <label for="airport-2">Минск-Национальный аэропорт Минск</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="flightNumber" id="flightNumber" placeholder="">
+                        <label for="flightNumber">Номер рейса</label>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" name="flightData" id="dateFlight" placeholder="" class="input-date">
+                            <label for="dateFlight">Дата и время вылета / прилета <span>*</span></label>
+                        </div>
+                        <div class="form-group form-group--select">
+                            <select name="lang" class="select-custom">
+                                <option value="8-15">
+                                    08:15
+                                </option>
+                                <option value="8-30" selected>
+                                    08:30
+                                </option>
+                                <option value="8-30" selected>
+                                    08:30
+                                </option>
+                                <option value="8-45" selected>
+                                    08:45
+                                </option>
+                                <option value="9-00" selected>
+                                    09:00
+                                </option>
+                                <option value="9-15" selected>
+                                    09:15
+                                </option>
+                                <option value="9-30" selected>
+                                    09:30
+                                </option>
+                                <option value="9-45" selected>
+                                    09:45
+                                </option>
+                                <option value="10-00" selected>
+                                    10:00
+                                </option>
+                                <option value="10-15" selected>
+                                    10:15
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" name="confirmationData" id="confirmationData" placeholder="" class="input-date" disabled>
+                            <label for="confirmationData">Рекомендуемое время подачи <span>*</span></label>
+                        </div>
+                        <div class="form-group form-group--select">
+                            <select name="lang" class="select-custom" disabled>
+                                <option value="" id="0" selected></option>
+                                <option value="8-15" id="1">
+                                    08:15
+                                </option>
+                                <option value="8-30" id="2">
+                                    08:30
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="address-inner">
+                        <div class="form-group">
+                            <input type="text" name="flightNumber" id="address" placeholder="">
+                            <label for="address">Адрес подачи / место назначения <span>*</span></label>
+                        </div>
+                    </div>
+                   <div class="add-address">
+                       <div class="add-address__btn">
+                           Добавить еще один адрес
+                           <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M8 0.5C3.58856 0.5 0 4.08856 0 8.5C0 12.9114 3.58856 16.5 8 16.5C12.4114 16.5 16 12.9114 16 8.5C16 4.08856 12.4114 0.5 8 0.5ZM8 15.3562C4.21852 15.3562 1.14383 12.2815 1.14383 8.5C1.14383 4.71852 4.21852 1.64383 8 1.64383C11.7815 1.64383 14.8562 4.71852 14.8562 8.5C14.8562 12.2815 11.7815 15.3562 8 15.3562ZM10.286 7.92808H8.57192V6.21404C8.57192 5.89821 8.31583 5.64213 8 5.64213C7.68417 5.64213 7.42808 5.89821 7.42808 6.21404V7.92808H5.71404C5.39821 7.92808 5.14213 8.18417 5.14213 8.5C5.14213 8.81583 5.39821 9.07192 5.71404 9.07192H7.42808V10.786C7.42808 11.1018 7.68417 11.3579 8 11.3579C8.31583 11.3579 8.57192 11.1018 8.57192 10.786V9.07192H10.286C10.6018 9.07192 10.8579 8.81583 10.8579 8.5C10.8562 8.18417 10.6018 7.92808 10.286 7.92808Z" fill="#6D7FDB"/>
+                           </svg>
+                       </div>
+                       <div class="add-address__info">
+                           +5,00 BYN
+                       </div>
+                   </div>
+                    <div class="row row--passengers">
+                        <div class="form-group form-group--select">
+                            <label for="passengers">Количество пассажиров <span>*</span></label>
+                            <select name="lang" class="select-custom" id="passengers">
+                                <option value="1" selected>
+                                    1
+                                </option>
+                                <option value="2">
+                                    2
+                                </option>
+                                <option value="3">
+                                    3
+                                </option>
+                                <option value="4">
+                                    4
+                                </option>
+                                <option value="5">
+                                    5
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group--select">
+                            <label for="baggage">Кол-во мест багажа <span>*</span></label>
+                            <select name="lang" class="select-custom" id="baggage">
+                                <option value="1" selected>
+                                    1
+                                </option>
+                                <option value="2">
+                                    2
+                                </option>
+                                <option value="3">
+                                    3
+                                </option>
+                                <option value="4">
+                                    4
+                                </option>
+                                <option value="5">
+                                    5
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row row--info">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.5 0C12.122 0 14.497 1.064 16.2133 2.78033H16.2197C17.936 4.503 19 6.878 19 9.5C19 12.122 17.936 14.497 16.2197 16.2197L16.1753 16.2577C14.4527 17.955 12.0967 19 9.5 19C6.878 19 4.503 17.936 2.78033 16.2197L2.74233 16.1753C1.045 14.459 0 12.103 0 9.5C0 6.878 1.064 4.503 2.78033 2.78667L2.78667 2.78033H2.78033C4.503 1.064 6.878 0 9.5 0ZM9.5 13.3887C9.91167 13.3887 10.2473 13.7243 10.2473 14.136C10.2473 14.5477 9.91167 14.877 9.5 14.877C9.08833 14.877 8.75267 14.5477 8.75267 14.136C8.75267 13.7243 9.08833 13.3887 9.5 13.3887ZM8.75267 4.864C8.75267 4.45233 9.08833 4.11667 9.5 4.11667C9.91167 4.11667 10.2473 4.45233 10.2473 4.864V11.647C10.2473 12.0587 9.91167 12.3943 9.5 12.3943C9.08833 12.3943 8.75267 12.0587 8.75267 11.647V4.864ZM15.162 3.838C13.7117 2.38767 11.7103 1.49467 9.5 1.49467C7.28967 1.49467 5.28833 2.38767 3.838 3.838C2.394 5.28833 1.49467 7.28967 1.49467 9.5C1.49467 11.6913 2.375 13.68 3.8 15.124L3.838 15.162C5.28833 16.6123 7.28967 17.5053 9.5 17.5053C11.6913 17.5053 13.68 16.625 15.124 15.2L15.162 15.162C16.606 13.7117 17.5053 11.7103 17.5053 9.5C17.5053 7.28967 16.606 5.28833 15.162 3.838Z" fill="#4F5AAD"/>
+                        </svg>
+                        Вы можете отменить поездку без штрафа за 2 часа до поездки
+                    </div>
+                </div>
+            </div>
+            <div class="rent-inner">
+                <h3 class="form-title">Личные данные</h3>
+                <div class="form-inner">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="">
+                        <label for="name">Имя и Фамилия <span>*</span></label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" id="phone" placeholder="+375 (__) ___-__-__">
+                        <label for="phone">Мобильный телефон <span>*</span></label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="mail" id="mail" placeholder="">
+                        <label for="mail">Электронная почта <span>*</span></label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="inscription" id="inscription" placeholder="">
+                        <label for="inscription">Надпись на табличке</label>
+                        <div class="form-group-info">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 15.75C3.72684 15.75 0.25 12.2732 0.25 8C0.25 3.72684 3.72684 0.25 8 0.25C12.2732 0.25 15.75 3.72684 15.75 8C15.75 12.2732 12.2732 15.75 8 15.75ZM8 1.21875C4.26062 1.21875 1.21875 4.26062 1.21875 8C1.21875 11.7394 4.26062 14.7812 8 14.7812C11.7394 14.7812 14.7812 11.7394 14.7812 8C14.7812 4.26062 11.7394 1.21875 8 1.21875Z" fill="#838C9C"/>
+                                <path d="M7.99346 11.3214C8.29835 11.3214 8.54551 11.0742 8.54551 10.7693C8.54551 10.4644 8.29835 10.2173 7.99346 10.2173C7.68857 10.2173 7.44141 10.4644 7.44141 10.7693C7.44141 11.0742 7.68857 11.3214 7.99346 11.3214Z" fill="#838C9C"/>
+                                <path d="M7.99445 9.66541C7.68972 9.66541 7.4424 9.41864 7.4424 9.11335C7.4424 8.37802 8.09216 7.81934 8.72758 7.36887C8.92521 7.22864 9.14327 6.76437 9.02127 6.38345C8.90092 6.0075 8.42284 5.78337 8.02978 5.78337H8.02923C7.59863 5.78337 7.06424 5.98376 6.85612 6.54465C6.74957 6.83061 6.43104 6.97525 6.14618 6.86981C5.86021 6.76382 5.71447 6.44583 5.82102 6.15987C6.15501 5.26057 7.02173 4.67871 8.02923 4.67871H8.03033C8.82805 4.67871 9.78586 5.14851 10.0729 6.04559C10.3512 6.91232 9.92277 7.87455 9.3663 8.26871C8.6271 8.79261 8.54706 9.03275 8.54706 9.11225C8.54595 9.41864 8.29918 9.66541 7.99445 9.66541Z" fill="#838C9C"/>
+                            </svg>
+                            <div class="form-group-info__content">
+                                Мы укажем ваше Имя и Фамилию, если необходимо
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="text" id="form-text" placeholder=""></textarea>
+                        <label for="form-text">Примечание:</label>
+                    </div>
+                    <div class="form-group">
+                        <p class="form-text"><span>*</span> – Поля обязательные для заполнения</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="rent-inner">
+                <div class="form-inner form-inner--pay">
+                    <h3 class="form-title">Оплата заказа</h3>
+                    <div class="form-group form-radio">
+                        <div class="form-group__radio">
+                            <input type="radio" name="pay" data-pay="online" id="onlinePay" class="pay-elem" checked>
+                            <label for="onlinePay">
+                                <svg width="39" height="26" viewBox="0 0 39 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M34.3937 0H3.88532C1.7417 0 0 1.7417 0 3.88532V21.8047C0 23.9483 1.7417 25.69 3.88532 25.69H34.3889C36.5325 25.69 38.2742 23.9483 38.2742 21.8047V3.88532C38.2742 1.7417 36.5325 0 34.3889 0H34.3937ZM36.2119 21.8095C36.2119 22.8095 35.3985 23.6277 34.3937 23.6277H3.88532C2.88528 23.6277 2.06707 22.8143 2.06707 21.8095V8.36875H36.2072V21.8095H36.2119ZM36.2119 6.30168H2.06707V3.8901C2.06707 2.89007 2.8805 2.07185 3.88532 2.07185H34.3889C35.3889 2.07185 36.2072 2.88528 36.2072 3.8901V6.30168H36.2119Z" fill="#6D7FDB"/>
+                                    <path d="M9.79463 13.6799H6.23947C5.50747 13.6799 4.91406 14.2733 4.91406 15.0053V16.7375C4.91406 17.4695 5.50747 18.0629 6.23947 18.0629H9.79463C10.5266 18.0629 11.12 17.4695 11.12 16.7375V15.0053C11.12 14.2733 10.5266 13.6799 9.79463 13.6799Z" fill="#6D7FDB"/>
+                                </svg>
+                                Online-оплата банковской картой
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group form-radio">
+                        <div class="form-group__radio">
+                            <input type="radio" name="pay" data-pay="car" id="carPay" class="pay-elem">
+                            <label for="carPay">
+                                <svg width="38" height="34" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.0495 16.8262C30.4189 16.8263 29.8024 17.0134 29.2781 17.3638C28.7538 17.7143 28.3451 18.2123 28.1039 18.795C27.8626 19.3777 27.7996 20.0188 27.9227 20.6373C28.0458 21.2559 28.3496 21.824 28.7956 22.2698C29.2416 22.7157 29.8098 23.0193 30.4283 23.1423C31.0469 23.2652 31.688 23.202 32.2706 22.9606C32.8533 22.7191 33.3512 22.3104 33.7015 21.7859C34.0518 21.2615 34.2387 20.645 34.2386 20.0143C34.2377 19.1689 33.9014 18.3584 33.3035 17.7606C32.7056 17.1629 31.895 16.8268 31.0495 16.8262ZM31.0495 21.3416C30.7871 21.3415 30.5307 21.2637 30.3126 21.1178C30.0944 20.972 29.9244 20.7648 29.8241 20.5224C29.7237 20.2799 29.6975 20.0132 29.7487 19.7558C29.7999 19.4985 29.9262 19.2621 30.1118 19.0766C30.2973 18.8911 30.5337 18.7647 30.791 18.7135C31.0483 18.6623 31.3151 18.6885 31.5575 18.7889C31.7999 18.8893 32.0072 19.0592 32.153 19.2774C32.2988 19.4955 32.3767 19.752 32.3768 20.0143C32.3764 20.3663 32.2365 20.7036 31.9877 20.9525C31.7388 21.2013 31.4014 21.3413 31.0495 21.3416Z" fill="#6D7FDB"/>
+                                    <path d="M38 12.6417C37.9979 12.501 37.9633 12.3626 37.8989 12.2375C37.7069 11.1282 37.2337 10.0866 36.5245 9.21238C35.8152 8.33812 34.8936 7.66037 33.8477 7.2439L27.5573 0.304461C27.42 0.154388 27.2377 0.0530736 27.0377 0.0158341C26.8378 -0.0214054 26.6312 0.00745447 26.4491 0.0980505L19.3011 3.69576L15.99 1.13805C15.829 1.01335 15.6315 0.944921 15.4279 0.94328C15.2243 0.941639 15.0257 1.00687 14.8627 1.12897L7.32216 6.77714H6.56998C4.82812 6.77911 3.15816 7.47194 1.92647 8.70363C0.694786 9.93532 0.00196372 11.6053 0 13.3471V26.6826C0.00196373 28.4245 0.694789 30.0944 1.92648 31.3261C3.15817 32.5578 4.82813 33.2506 6.57 33.2526H31.43C33.1719 33.2506 34.8418 32.5578 36.0735 31.3261C37.3052 30.0944 37.998 28.4245 38 26.6826V13.3471C38 13.1569 37.9874 12.9696 37.9714 12.7833C37.9848 12.737 37.9944 12.6896 38 12.6417ZM26.6536 2.07987L30.9109 6.77714H23.29L20.9351 4.958L26.6536 2.07987ZM15.4118 3.04441L20.2449 6.77714H10.4288L15.4118 3.04441ZM6.57 8.63896H31.43C32.3889 8.64153 33.324 8.93714 34.1101 9.48617C34.8962 10.0352 35.4957 10.8114 35.8282 11.7108H2.17182C2.50432 10.8114 3.1038 10.0352 3.88991 9.48617C4.67601 8.93714 5.61116 8.64153 6.57 8.63896ZM31.43 31.3908H6.57C5.32172 31.3895 4.12495 30.893 3.24228 30.0103C2.35961 29.1276 1.86314 27.9309 1.86182 26.6826V13.5726H36.1382V26.6826C36.1369 27.9309 35.6404 29.1276 34.7577 30.0103C33.8751 30.893 32.6783 31.3895 31.43 31.3908Z" fill="#6D7FDB"/>
+                                </svg>
+                                Оплата в автомобиле
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-inner">
+                        <div class="form-group form-group--checkbox">
+                            <input type="checkbox" name="dataPerson" id="dataPerson" checked>
+                            <label for="dataPerson">Я согласен(-на) на обработку и хранение моих персональных данных</label>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                            <input type="checkbox" name="terms" id="terms" checked>
+                            <label for="terms">Согласен с <a href="#">условиями публичной оферты</a></label>
+                        </div>
+                    </div>
+                    <div class="rent-price">
+                        <div class="rent-price__total">
+                            Итого: 70,00 <span>BYN</span>
+                        </div>
+                        <div class="rent-price__btn-list">
+                            <button type="submit" class="rent-price-btn rent-price-btn--online active" data-pay="online">Перейти к оплате</button>
+                            <button type="submit" class="rent-price-btn rent-price-btn--car" data-pay="car">Оформить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer-content">
+            <div class="footer-text">
+                <div class="footer-support">
+                    Служба поддержки программы «Белавия Лидер»
+                </div>
+                <a href="tel:+375172202080" class="footer-tel">+375 (17) 220-20-80</a>
+                <a href="mailto:leader@belavia.by" class="footer-mail">leader@belavia.by</a>
+            </div>
+            <div class="footer-nav">
+                <ul class="social-media">
+                    <li class="social-media__item"><a href="#">
+                        <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1225 0.0723276L0.60702 4.55255C-0.178866 4.87102 -0.174319 5.31334 0.462833 5.51059L3.41932 6.4411L10.2598 2.08669C10.5832 1.88814 10.8787 1.99495 10.6358 2.21251L5.09371 7.2589H5.09241L5.09371 7.25956L4.88977 10.3342C5.18854 10.3342 5.32039 10.1959 5.48795 10.0327L6.92398 8.62387L9.911 10.8499C10.4618 11.1559 10.8573 10.9986 10.9944 10.3355L12.9552 1.01201C13.1559 0.200109 12.648 -0.167509 12.1225 0.0723276Z" fill="white"/>
+                        </svg>
+
+                    </a></li>
+                    <li class="social-media__item"><a href="#">
+                        <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 0.0908654C6.78125 0.0605769 6.02778 0 5.15278 0C3.32176 0 2.06597 1.04495 2.06597 2.9607V4.61142H0V6.85277H2.06597V12.6H4.54514V6.85277H6.60301L6.91898 4.61142H4.54514V3.18029C4.54514 2.53666 4.73148 2.0899 5.72801 2.0899H7V0.0908654Z" fill="white"/>
+                        </svg>
+
+                    </a></li>
+                    <li class="social-media__item"><a href="#">
+                        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9766 1.0625C15.9766 1.0625 15.8672 0.75 15.1875 0.835937L12.9375 0.851562C12.7656 0.828125 12.6406 0.898437 12.6406 0.898437C12.6406 0.898437 12.5078 0.96875 12.4453 1.14062C12.0781 2.08594 11.6094 2.89844 11.6094 2.89844C10.6094 4.60156 10.2031 4.69531 10.0391 4.58594C9.65625 4.34375 9.75781 3.60156 9.75781 3.07031C9.75781 1.41406 10.0078 0.726562 9.26563 0.546874C9.02344 0.492187 8.84375 0.453125 8.21094 0.445312C7.40625 0.437499 6.72656 0.445312 6.34375 0.632812C6.08594 0.757812 5.89063 1.03906 6.00781 1.05469C6.15625 1.07812 6.49219 1.14844 6.67188 1.39062C6.67188 1.39062 6.86719 1.71094 6.89844 2.41406C6.98438 4.35937 6.58594 4.60156 6.58594 4.60156C6.28125 4.76562 5.75 4.49219 4.96875 2.88281C4.96875 2.88281 4.51563 2.08594 4.16406 1.21094C4.10156 1.04687 3.97656 0.960938 3.97656 0.960938C3.97656 0.960938 3.83594 0.851562 3.63281 0.820312L1.49219 0.835937C1.16406 0.835937 1.04688 0.984374 1.04688 0.984374C1.04688 0.984374 0.929687 1.10937 1.03906 1.36719C2.71094 5.29687 4.61719 7.26562 4.61719 7.26562C4.61719 7.26562 6.35938 9.08594 8.33594 8.96094H9.23438C9.50781 8.9375 9.64844 8.78906 9.64844 8.78906C9.64844 8.78906 9.77344 8.64844 9.76563 8.39062C9.75 7.1875 10.3125 7.00781 10.3125 7.00781C10.8594 6.83594 11.5625 8.17187 12.3125 8.6875C12.3125 8.6875 12.8828 9.07813 13.3125 8.99219L15.3125 8.96094C16.3672 8.95312 15.8672 8.07812 15.8672 8.07812C15.8281 8.00781 15.5781 7.46875 14.375 6.35156C13.125 5.1875 13.2891 5.375 14.8047 3.35937C15.7266 2.13281 16.0938 1.38281 15.9766 1.0625Z" fill="white"/>
+                        </svg>
+
+                    </a></li>
+                    <li class="social-media__item"><a href="#">
+                        <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5603 1.55804C13.0748 1.7673 12.5474 1.91797 12.0033 1.97656C12.5642 1.64174 12.9911 1.1144 13.192 0.486607C12.673 0.796316 12.0871 1.02232 11.476 1.13951C10.9821 0.612165 10.279 0.285714 9.50056 0.285714C8.00223 0.285714 6.79688 1.49944 6.79688 2.9894C6.79688 3.19866 6.82199 3.40792 6.86384 3.60882C4.62054 3.49163 2.61998 2.4202 1.28906 0.779576C1.05469 1.18136 0.920759 1.64174 0.920759 2.14397C0.920759 3.08147 1.39788 3.91016 2.12612 4.39565C1.68248 4.37891 1.26395 4.25335 0.904018 4.05246C0.904018 4.06083 0.904018 4.07757 0.904018 4.08594C0.904018 5.40011 1.83315 6.48828 3.07199 6.7394C2.84598 6.79799 2.60324 6.83147 2.36049 6.83147C2.18471 6.83147 2.0173 6.81473 1.84989 6.78962C2.19308 7.86105 3.18917 8.63951 4.37779 8.66462C3.44866 9.39286 2.28516 9.81975 1.02121 9.81975C0.795201 9.81975 0.585938 9.81138 0.368304 9.78627C1.56529 10.5564 2.98828 11 4.52009 11C9.49219 11 12.2126 6.8817 12.2126 3.30748C12.2126 3.19029 12.2126 3.0731 12.2042 2.95591C12.7316 2.57087 13.192 2.09375 13.5603 1.55804Z" fill="white"/>
+                        </svg>
+                    </a></li>
+                    <li class="social-media__item"><a href="#">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.99812 7.92008C7.05851 7.92008 7.91812 7.06046 7.91812 6.00008C7.91812 4.93969 7.05851 4.08008 5.99812 4.08008C4.93774 4.08008 4.07812 4.93969 4.07812 6.00008C4.07812 7.06046 4.93774 7.92008 5.99812 7.92008Z" fill="white"/>
+                            <path d="M8.64 0H3.36C2.46918 0.00100889 1.61514 0.355332 0.985236 0.985236C0.355332 1.61514 0.00100889 2.46918 0 3.36V8.64C0.00100889 9.53082 0.355332 10.3849 0.985236 11.0148C1.61514 11.6447 2.46918 11.999 3.36 12H8.64C9.53082 11.999 10.3849 11.6447 11.0148 11.0148C11.6447 10.3849 11.999 9.53082 12 8.64V3.36C11.999 2.46918 11.6447 1.61514 11.0148 0.985236C10.3849 0.355332 9.53082 0.00100889 8.64 0ZM6 8.88C5.43039 8.88 4.87357 8.71109 4.39996 8.39463C3.92634 8.07817 3.55721 7.62838 3.33923 7.10213C3.12125 6.57588 3.06421 5.99681 3.17534 5.43814C3.28646 4.87947 3.56076 4.36631 3.96353 3.96353C4.36631 3.56076 4.87947 3.28646 5.43814 3.17534C5.99681 3.06421 6.57588 3.12125 7.10213 3.33923C7.62838 3.55721 8.07817 3.92634 8.39463 4.39996C8.71109 4.87357 8.88 5.43039 8.88 6C8.87914 6.76356 8.57543 7.4956 8.03551 8.03551C7.4956 8.57543 6.76356 8.87914 6 8.88ZM9.12 3.6C8.9776 3.6 8.83839 3.55777 8.71999 3.47866C8.60159 3.39954 8.5093 3.28709 8.45481 3.15553C8.40031 3.02397 8.38605 2.8792 8.41383 2.73953C8.44162 2.59987 8.51019 2.47158 8.61088 2.37088C8.71158 2.27019 8.83987 2.20162 8.97954 2.17383C9.1192 2.14605 9.26397 2.16031 9.39553 2.21481C9.52709 2.2693 9.63954 2.36159 9.71866 2.47999C9.79777 2.59839 9.84 2.7376 9.84 2.88C9.84 3.07096 9.76414 3.25409 9.62912 3.38912C9.49409 3.52414 9.31096 3.6 9.12 3.6Z" fill="white"/>
+                        </svg>
+
+                    </a></li>
+                    <li class="social-media__item"><a href="#">
+                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5547 7.66222V3.19111L9.33591 5.44L5.5547 7.66222ZM7 0C4.05472 0 2.10161 0.16 2.10161 0.16C1.82818 0.195555 1.22662 0.195555 0.695376 0.835555C0.695376 0.835555 0.265693 1.31556 0.140694 2.41778C-0.00774168 3.70667 7.08639e-05 4.99555 7.08639e-05 4.99555V6.20444C7.08639e-05 6.20444 -0.00774168 7.49333 0.140694 8.78222C0.265693 9.87556 0.695376 10.3644 0.695376 10.3644C1.22662 10.9956 1.92974 10.9778 2.24224 11.04C2.24224 11.04 3.35941 11.1644 7 11.2C9.94528 11.2 11.8984 11.0311 11.8984 11.0311C12.1718 10.9956 12.7734 10.9956 13.3046 10.3644C13.3046 10.3644 13.7343 9.87556 13.8593 8.78222C14.0077 7.49333 13.9999 6.20444 13.9999 6.20444V4.99555C13.9999 4.99555 14.0077 3.70667 13.8593 2.41778C13.7343 1.31556 13.3046 0.835555 13.3046 0.835555C12.7734 0.195555 12.1718 0.195555 11.8984 0.16C11.8984 0.16 9.94528 0 7 0Z" fill="white"/>
+                        </svg>
+
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
