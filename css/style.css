@@ -947,6 +947,26 @@ input[type="radio"] {
   }
 }
 
+.form-group--time{
+  width: 217px;
+}
+
+.form-group:not(.form-radio).form-group--time input{
+  padding: 12px ;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.form-group:not(.form-radio).form-group--time input::placeholder{
+  padding: 12px ;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
 @media (max-width: 767px) {
   .car-item__content {
     flex-direction: column;
