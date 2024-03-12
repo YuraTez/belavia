@@ -47,6 +47,20 @@ IMask(
     }
 )
 
+let maskTime = document.querySelectorAll(".form-group--time input");
+
+maskTime.forEach((el)=>{
+    IMask(el,
+        {
+            mask: '00:00'
+        }
+    )
+})
+
+
+
+
+
 $(".pay-elem").on("change" , function (){
     let attrName =  this.getAttribute("data-pay");
    $(".rent-price-btn").removeClass("active");
