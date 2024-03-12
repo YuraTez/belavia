@@ -1106,6 +1106,10 @@ input[type="radio"] {
   .footer-support {
     text-align: center;
   }
+
+  .form-group--time{
+   width: 100%;
+  }
 }
 
 .form-group:not(.form-radio) input:focus,
