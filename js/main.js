@@ -1,14 +1,7 @@
 const selectLang = document.querySelector(".select-lang");
-const selectTime = document.querySelectorAll(".select-custom");
-const arrSelect = Array.from(selectTime);
-arrSelect.push(selectLang)
-
-arrSelect.forEach((el)=>{
-    const choices = new Choices(el, {
-        searchEnabled: false,
-    })
+const choices = new Choices(selectLang, {
+    searchEnabled: false,
 })
-
 
 $(".rent-btn").on("click" , function (){
     $(".car-list").slideDown();

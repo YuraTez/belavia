@@ -859,6 +859,7 @@ input[type="radio"] {
 }
 
 .footer-support {
+  max-width: 400px;
   color: rgb(98, 103, 112);
   font-size: 14px;
   font-weight: 600;
@@ -951,7 +952,8 @@ input[type="radio"] {
   width: 217px;
 }
 
-.form-group:not(.form-radio).form-group--time input{
+.form-group:not(.form-radio).form-group--time input,
+.form-group:not(.form-radio).row--passengers input{
   padding: 12px ;
   text-align: center;
   font-size: 15px;
@@ -959,13 +961,19 @@ input[type="radio"] {
   line-height: 20px;
 }
 
-.form-group:not(.form-radio).form-group--time input::placeholder{
+.row--passengers .form-group:not(.form-radio) input::placeholder,
+.row--passengers .form-group:not(.form-radio) input{
   padding: 12px ;
   text-align: center;
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
 }
+
+.row--passengers .form-group:not(.form-radio) input{
+  width: 117px;
+}
+
 
 @media (max-width: 767px) {
   .car-item__content {
