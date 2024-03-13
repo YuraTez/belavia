@@ -33,12 +33,77 @@ $(".add-address__btn").on("click", function () {
 })
 
 
-IMask(
+/*IMask(
     document.getElementById('phone'),
     {
         mask: '+{375} (00) 000-00-00'
     }
-)
+)*/
+
+
+var maskList = $.masksSort(
+    $.masksLoad('js/data/phone-codes.json'),
+
+    ['#'],
+    /[0-9]|#/,
+    'mask'
+);
+
+$(document).ready(function () {
+    var maskList = $.masksSort(
+        $.masksLoad('js/data/phone-codes.json'),
+
+        ['#'],
+        /[0-9]|#/,
+        'mask'
+    );
+
+    var maskOpts = {
+        inputmask: {
+            definitions: {
+                '#': {
+                    validator: '[0-9]',
+
+                    cardinality: 1,
+                },
+            },
+
+            //clearIncomplete: true,
+
+            showMaskOnHover: false,
+
+            autoUnmask: true,
+        },
+
+        match: /[0-9]/,
+
+        replace: '#',
+
+        list: maskList,
+
+        listKey: 'mask',
+
+        onMaskChange: function (maskObj, completed) {
+            if (completed) {
+                var hint = maskObj.name_ru;
+
+                if (maskObj.desc_ru && maskObj.desc_ru != '') {
+                    hint += ' (' + maskObj.desc_ru + ')';
+                }
+
+                //$(".descr").html(hint);
+            } else {
+                //$(".descr").html("");
+            }
+
+            $(this).attr('placeholder', $(this).inputmask('getemptymask'));
+        },
+    };
+
+    $('input[name="phone"],input[name="registerPhone"],input[name="profilePhone"]').inputmasks(maskOpts);
+});
+
+
 
 let maskTime = document.querySelectorAll(".form-group--time input");
 
