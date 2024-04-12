@@ -9,7 +9,9 @@ $(".rent-btn").on("click" , function (){
 })
 
 $( function() {
-    $( ".input-date" ).datepicker();
+    $( ".input-date" ).datepicker(
+        {'language' : 'ru'}
+    );
 } );
 
 const template = (address , flightNumber)=>`

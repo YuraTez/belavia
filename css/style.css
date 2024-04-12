@@ -1240,3 +1240,98 @@ table tr:first-child td{
     line-height: 27px;
   }
 }
+
+
+
+
+
+.cookies{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.46);
+  backdrop-filter: blur(17.299999237060547px);
+  padding: 22px;
+}
+
+.cookies .wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.cookies-text{
+  max-width: 828px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+
+.cookies-text a{
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition: .3s;
+  color: #fff;
+}
+
+.cookies-text a:hover{
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cookies-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  width: 206px;
+  height: 52px;
+  background: #82c50b;
+  font-weight: 800;
+  font-size: 14px;
+  color: #fff;
+  transition: .3s;
+  flex-shrink: 0;
+}
+
+.cookies-btn:hover{
+  background: #6ea50b;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .cookies{
+    padding: 40px 30px;
+  }
+
+  .cookies .wrapper{
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .cookies-text{
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
