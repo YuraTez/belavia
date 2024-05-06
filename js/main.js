@@ -1,6 +1,9 @@
-const selectLang = document.querySelector(".select-lang");
-const choices = new Choices(selectLang, {
-    searchEnabled: false,
+const selectLang = document.querySelectorAll(".select-lang");
+
+selectLang.forEach((el)=>{
+    const choices = new Choices(el, {
+        searchEnabled: false,
+    })
 })
 
 $(".rent-btn").on("click" , function (){
@@ -22,7 +25,6 @@ const template = (address , flightNumber)=>`
 
 `
 
-
 $(".add-address__btn").on("click", function () {
     let addressItemLength = $(".address-inner .form-group").length;
     let numberAddress = +addressItemLength + 1
@@ -41,7 +43,6 @@ $(".add-address__btn").on("click", function () {
         mask: '+{375} (00) 000-00-00'
     }
 )*/
-
 
 var maskList = $.masksSort(
     $.masksLoad('js/data/phone-codes.json'),
@@ -105,8 +106,6 @@ $(document).ready(function () {
     $('input[name="phone"],input[name="registerPhone"],input[name="profilePhone"]').inputmasks(maskOpts);
 });
 
-
-
 let maskTime = document.querySelectorAll(".form-group--time input");
 
 maskTime.forEach((el)=>{
@@ -116,10 +115,6 @@ maskTime.forEach((el)=>{
         }
     )
 })
-
-
-
-
 
 $(".pay-elem").on("change" , function (){
     let attrName =  this.getAttribute("data-pay");
@@ -168,6 +163,138 @@ $(".rent-inner--offer").on("click" , function (event){
 
 
 
+
+
+
+
+
+
+
+
+// связанные списки
+let cityArr = {
+    "2": [" Введите пункт назначения", "Минск", "Брест", "Гродн", "Гомель", "Могилев", "Витебск"],
+    "3": [" Введите пункт назначения", "Брест", "Гродн", "Гомель"],
+    "4": [" Введите пункт назначения", "Брест", "Гродн", "Гомель"],
+    "5": [" Введите пункт назначения", "Брест", "Гродн", "Гомель"],
+    "6": [" Введите пункт назначения", "Брест", "Гродн", "Гомель"],
+    "7": [" Введите пункт назначения", "Брест", "Гродн", "Гомель"]
+};
+
+let listsArr = {
+    "2": ["Введите пункт отправления", "Минская область", "Брестская область", "Гродненская область", "Гомельская область", "Могилевская область", "Витебская область"],
+    "3": ["Введите пункт отправления", "Фрунзунский", "Лененский", "Московский"],
+    "4": ["Введите пункт отправления", "Фрунзунский", "Лененский", "Московский"],
+    "5": ["Введите пункт отправления", "Фрунзунский", "Лененский", "Московский"],
+    "6": ["Введите пункт отправления", "Фрунзунский", "Лененский", "Московский"],
+    "7": ["Введите пункт отправления", "Фрунзунский", "Лененский", "Московский"],
+    "8": ["Введите пункт отправления", "Italian"]
+};
+
+const countryEl = document.querySelector("#point-1");
+const regionEl = document.querySelector("#point-2");
+
+const countrySelect = new Choices(countryEl, {
+    searchEnabled: true,
+    shouldSort: false,
+    removeItemButton: true,
+})
+
+const regionSelect = new Choices(regionEl, {
+    searchEnabled: true,
+    shouldSort: false,
+    removeItemButton: true,
+})
+
+
+function addListener(el, select, selectClear) {
+    $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
+
+    el.addEventListener(
+        'change',
+        function (event) {
+            let textContent = event.target.textContent.replace(/\s+/g, '')
+            if (textContent === "") {
+                select.setChoiceByValue('1');
+                $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
+                if (selectClear) {
+                    selectClear.setChoiceByValue('1');
+                    selectClear.disable();
+                }
+            } else {
+                $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
+                if (selectClear) {
+                    selectClear.enable();
+                }
+            }
+            $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
+        },
+        false,
+    );
+}
+
+addListener(countryEl, countrySelect, regionSelect)
+addListener(regionEl, regionSelect)
+
+window.onload = selectCity;
+
+function selectAdd() {
+    countryEl.onchange = selectCountry;
+    regionEl.onchange = selectCity;
+}
+
+selectAdd()
+
+function selectCity(ev) {
+    countrySelect.clearChoices()
+    $('[data-select="city-list"]').empty();
+    let itemSelect = this.value > 1 ? this.value : "2"  || "2", o;
+    if(cityArr[itemSelect].length){
+        for (let i = 0; i < cityArr[itemSelect].length; i++) {
+            o = new Option(cityArr[itemSelect][i], i, false, false);
+            $('[data-select="city-list"]').append(o);
+
+            countrySelect.setChoices(
+                [
+                    {value: `${i + 1}`, label: cityArr[itemSelect][i], disabled: false},
+
+                ],
+                'value',
+                'label',
+                false,
+            );
+        }
+        $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
+    }
+
+}
+
+
+
+
+
+
+function selectCountry(ev) {
+    regionSelect.clearChoices()
+    $('[data-select="region-list"]').empty();
+    let itemSelect = this.value > 1 ? this.value : "2"  || "2", o;
+
+    for (let i = 0; i < listsArr[itemSelect].length; i++) {
+        o = new Option(listsArr[itemSelect][i], i, false, false);
+        $('[data-select="region-list"]').append(o);
+
+        regionSelect.setChoices(
+            [
+                {value: `${i + 1}`, label: listsArr[itemSelect][i], disabled: false},
+
+            ],
+            'value',
+            'label',
+            false,
+        );
+    }
+    $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
+}
 
 
 

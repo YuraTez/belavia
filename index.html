@@ -35,15 +35,33 @@
                     <path d="M148.1 22.6V18.8H151.7V42H148.1V38.3C146.3 40.8 143.5 42.4 139.5 42.4C132.5 42.4 127.9 37.1 127.9 30.4C127.9 23.8 132.5 18.4 139.5 18.4C143.5 18.5 146.3 20.1 148.1 22.6ZM148.3 30.5C148.3 25.7 145.3 21.7 140 21.7C134.7 21.7 131.5 25.7 131.5 30.5C131.5 35.3 134.7 39.3 140 39.3C145.3 39.3 148.3 35.3 148.3 30.5Z" fill="#4B61C9"/>
                 </svg>
             </a>
-            <div class="header-lng">
-                <select name="lang" class="select-lang" id="lang">
-                    <option value="ru" id="ru">
-                        Русский
-                    </option>
-                    <option value="en" id="en">
-                        English
-                    </option>
-                </select>
+            <div class="header-select-inner">
+                <div class="header-lng">
+                    <select name="lang" class="select-lang" id="currency ">
+                        <option value="byn" id="byn">
+                            BYN
+                        </option>
+                        <option value="eur" id="eur">
+                            EUR
+                        </option>
+                        <option value="usd" id="usd">
+                            USD
+                        </option>
+                        <option value="rub" id="rub">
+                            RUB
+                        </option>
+                    </select>
+                </div>
+                <div class="header-lng">
+                    <select name="lang" class="select-lang" id="lang">
+                        <option value="ru" id="ru">
+                            Русский
+                        </option>
+                        <option value="en" id="en">
+                            English
+                        </option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -52,6 +70,42 @@
     <div class="wrapper">
         <h2 class="h2">Заказ трансфера</h2>
         <div class="rent-inner rent-inner--offer">
+            <h3 class="form-title">Направление транспорта и тариф</h3>
+
+            <div class="location form-inner">
+                <div class="step-form__inner">
+                    <div class="form-group custom-select-inner form-group-custom-select">
+                        <label for="point-1" class="form-group__label">Откуда</label>
+                        <div class="form-row">
+                            <select name="type-moto" class="select-type  custom-select-list" id="point-1">
+                                <option value="" selected>
+                                    Введите пункт отправления
+                                </option>
+                                <option value="3">
+                                    Minsk
+                                </option>
+                                <option value="4">
+                                    Moskva
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group custom-select-inner form-group-custom-select">
+                        <label for="point-2" class="form-group__label">Куда</label>
+                        <div class="form-row">
+                            <select name="type-moto" class="select-type  custom-select-list" id="point-2" data-select="region-list" disabled>
+                                <option value="" selected>
+                                    Введите пункт назначения
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
             <div class="best-offer">
                 <div class="best-offer__item">
                     <div class="car-item">
@@ -395,6 +449,9 @@
                             <button type="submit" class="rent-price-btn rent-price-btn--car" data-pay="car">Оформить заявку</button>
                         </div>
                     </div>
+                    <div class="rent-price-info">
+                        Стоимость указана информационно, оплата производится в BYN
+                    </div>
                 </div>
             </div>
 
@@ -455,7 +512,7 @@
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-<script src="https://unpkg.com/imask"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.0/imask.min.js" integrity="sha512-nTNcq3y76KV0waC+4blkE81acF83+Q0wmdNlDfpXgzpswh6FbhemEYoIV3TH+tOhadNeviCA+WPD5FEuXeF6mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/jquery.inputmask.bundle.min.js"></script>
 <script src="js/jquery.inputmask-multi.min.js"></script>
 <script src="js/datepicker-ru.js"></script>
