@@ -237,6 +237,7 @@ addListener(countryEl, countrySelect, regionSelect)
 addListener(regionEl, regionSelect)
 
 window.onload = selectCity;
+window.onload = selectCountry;
 
 function selectAdd() {
     countryEl.onchange = selectCountry;

@@ -1380,6 +1380,12 @@ table tr:first-child td{
   height: 46px;
   background: #fff;
   padding-left: 16px;
+  transition: .3s;
+}
+
+.form-group.custom-select-inner .choices__inner:hover{
+  box-shadow: 0 0 3px 0 rgba(82, 168, 236, 0.73), inset 0 0 4px 0 rgba(82, 168, 236, 0.71);
+  border: 1px solid #4097e8;
 }
 
 .form-group.custom-select-inner .choices__list--single .choices__item.choices__item--selectable{
@@ -1419,9 +1425,15 @@ table tr:first-child td{
   opacity: 0;
   padding-left: 20px;
   border: none !important;
-  width: 85%;
+ /* width: 85%;*/
   box-shadow: none !important;
   height: 44px;
+  transition: .3s;
+}
+
+.custom-select-inner .choices[data-type*=select-one] .choices__input:focus{
+  box-shadow: 0 0 3px 0 rgba(82, 168, 236, 0.73), inset 0 0 4px 0 rgba(82, 168, 236, 0.71) !important;
+  border: 1px solid #4097e8 !important;
 }
 
 .custom-select-inner .choices__list--dropdown.is-active .choices__input{
@@ -1461,6 +1473,10 @@ table tr:first-child td{
   text-align: center;
   color: #838c9c;
   margin-top: 10px;
+}
+
+.location{
+  margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
