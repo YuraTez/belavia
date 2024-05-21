@@ -223,24 +223,17 @@ const regionSelect = new Choices(regionEl, {
     removeItemButton: true,
 })
 
-
-function addListener(el, select, selectClear) {
+function addListener(el, select) {
     $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
 
     el.addEventListener(
         'change',
         function (event) {
             let textContent = event.target.textContent.replace(/\s+/g, '')
+            console.log(textContent , "textContent")
             if (textContent === "") {
-                selectClear.setChoiceByValue('1');
                 select.setChoiceByValue('1');
-                selectCity()
                 $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
-            } else {
-                $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
-                if (selectClear) {
-                    selectClear.enable();
-                }
             }
             $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
         },
@@ -248,8 +241,8 @@ function addListener(el, select, selectClear) {
     );
 }
 
-addListener(countryEl, countrySelect, regionSelect)
-addListener(regionEl, regionSelect, countrySelect)
+addListener(countryEl, countrySelect)
+addListener(regionEl, regionSelect)
 
 window.onload = selectCity;
 window.onload = selectCountry;
