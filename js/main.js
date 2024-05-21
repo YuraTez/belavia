@@ -232,8 +232,9 @@ function addListener(el, select, selectClear) {
         function (event) {
             let textContent = event.target.textContent.replace(/\s+/g, '')
             if (textContent === "") {
-                select.setChoiceByValue('1');
                 selectClear.setChoiceByValue('1');
+                select.setChoiceByValue('1');
+                selectCity()
                 $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
             } else {
                 $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
@@ -300,7 +301,6 @@ function selectCountry(ev) {
     regionSelect.clearChoices()
     $('[data-select="region-list"]').empty();
     let itemSelect = this.value !== undefined && this.value !== "" ? this.value : "1"  || "1", o;
-
     for (let i = 0; i < listsArr[itemSelect].length; i++) {
         o = new Option(listsArr[itemSelect][i], i, false, false);
         $('[data-select="region-list"]').append(o);
