@@ -172,7 +172,7 @@ $(".rent-inner--offer").on("click" , function (event){
 
 
 // связанные списки
-let cityArr = {
+/*let cityArr = {
     "2": [" Введите пункт назначения", "Минск", "Брест", "Гродн", "Гомель", "Могилев", "Витебск"],
     "3": [" Введите пункт назначения", "Брест", "Гродн", "Гомель"],
     "4": [" Введите пункт назначения", "Брест", "Гродн", "Гомель"],
@@ -189,7 +189,24 @@ let listsArr = {
     "6": ["Введите пункт отправления", "Фрунзунский", "Лененский", "Московский"],
     "7": ["Введите пункт отправления", "Фрунзунский", "Лененский", "Московский"],
     "8": ["Введите пункт отправления", "Italian"]
+};*/
+
+let cityArr = {
+    "1": ["Введите пункт назначения", "Минск","Москва"],
+    "Аэропорт Минск": ["Введите пункт назначения", "Минск"],
+    "ЖД вокзал": ["Введите пункт назначения", "Минск"],
+    "Дудутки": ["Введите пункт назначения", "Минск"],
+    "Аэропорт Шереметьево": ["Введите пункт назначения", "Москва"],
+    "ЖД вокзал Центральный": ["Введите пункт назначения", "Москва"],
 };
+
+let listsArr = {
+    "1": ["Введите пункт отправления", "Аэропорт Минск", "ЖД вокзал", "Дудутки","Аэропорт Шереметьево" , "ЖД вокзал Центральный"],
+    "Минск": ["Введите пункт отправления", "Аэропорт Минск", "ЖД вокзал", "Дудутки"],
+    "Москва": ["Введите пункт отправления", "Аэропорт Шереметьево", "ЖД вокзал Центральный"],
+};
+
+
 
 const countryEl = document.querySelector("#point-1");
 const regionEl = document.querySelector("#point-2");
@@ -216,11 +233,8 @@ function addListener(el, select, selectClear) {
             let textContent = event.target.textContent.replace(/\s+/g, '')
             if (textContent === "") {
                 select.setChoiceByValue('1');
+                selectClear.setChoiceByValue('1');
                 $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
-                if (selectClear) {
-                    selectClear.setChoiceByValue('1');
-                    selectClear.disable();
-                }
             } else {
                 $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
                 if (selectClear) {
@@ -234,7 +248,7 @@ function addListener(el, select, selectClear) {
 }
 
 addListener(countryEl, countrySelect, regionSelect)
-addListener(regionEl, regionSelect)
+addListener(regionEl, regionSelect, countrySelect)
 
 window.onload = selectCity;
 window.onload = selectCountry;
@@ -249,15 +263,62 @@ selectAdd()
 function selectCity(ev) {
     countrySelect.clearChoices()
     $('[data-select="city-list"]').empty();
-    let itemSelect = this.value > 1 ? this.value : "2"  || "2", o;
+    let itemSelect = this.value !== undefined && this.value !== "" ? this.value : "1"  || "1", o;
     if(cityArr[itemSelect].length){
         for (let i = 0; i < cityArr[itemSelect].length; i++) {
             o = new Option(cityArr[itemSelect][i], i, false, false);
             $('[data-select="city-list"]').append(o);
 
-            countrySelect.setChoices(
+            if(i > 0){
+                countrySelect.setChoices(
+                    [
+                        {value: `${cityArr[itemSelect][i]}`, label: cityArr[itemSelect][i], disabled: false},
+
+                    ],
+                    'value',
+                    'label',
+                    false,
+                );
+            }else{
+                countrySelect.setChoices(
+                    [
+                        {value: "1", label: cityArr[itemSelect][i], disabled: false},
+
+                    ],
+                    'value',
+                    'label',
+                    false,
+                );
+            }
+
+        }
+        $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
+    }
+}
+
+function selectCountry(ev) {
+    regionSelect.clearChoices()
+    $('[data-select="region-list"]').empty();
+    let itemSelect = this.value !== undefined && this.value !== "" ? this.value : "1"  || "1", o;
+
+    for (let i = 0; i < listsArr[itemSelect].length; i++) {
+        o = new Option(listsArr[itemSelect][i], i, false, false);
+        $('[data-select="region-list"]').append(o);
+
+        if(i>0){
+            regionSelect.setChoices(
                 [
-                    {value: `${i + 1}`, label: cityArr[itemSelect][i], disabled: false},
+                    {value: `${listsArr[itemSelect][i]}`, label: listsArr[itemSelect][i], disabled: false},
+
+                ],
+                'value',
+                'label',
+                false,
+            );
+        }else{
+            regionSelect.setChoices(
+                [
+                    {value: "1", label: listsArr[itemSelect][i], disabled: false},
 
                 ],
                 'value',
@@ -265,34 +326,8 @@ function selectCity(ev) {
                 false,
             );
         }
-        $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
-    }
-
-}
 
 
-
-
-
-
-function selectCountry(ev) {
-    regionSelect.clearChoices()
-    $('[data-select="region-list"]').empty();
-    let itemSelect = this.value > 1 ? this.value : "2"  || "2", o;
-
-    for (let i = 0; i < listsArr[itemSelect].length; i++) {
-        o = new Option(listsArr[itemSelect][i], i, false, false);
-        $('[data-select="region-list"]').append(o);
-
-        regionSelect.setChoices(
-            [
-                {value: `${i + 1}`, label: listsArr[itemSelect][i], disabled: false},
-
-            ],
-            'value',
-            'label',
-            false,
-        );
     }
     $('.custom-select-inner .choices__item--choice[data-id=1]').hide();
 }

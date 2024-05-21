@@ -1455,7 +1455,15 @@ table tr:first-child td{
   background: url("../img/cross-reset-active.svg") no-repeat center;
 }
 
-.choices__item.choices__item--selectable[data-value="1"]{
+/*.choices__item.choices__item--selectable[data-value="1"]{
+  color: #858585 !important;
+}*/
+
+.form-group.custom-select-inner .choices__list--single .choices__item.choices__item--selectable{
+  display: block !important;
+}
+
+.choices__placeholder{
   color: #858585 !important;
 }
 
